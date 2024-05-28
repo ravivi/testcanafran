@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testcanafran/screen/nav.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -150,6 +151,13 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 15,
                     ),
                     GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => NavBarScreen()),
+                          );
+                      },
                       child: Container(
                           alignment: Alignment.center,
                           padding:
@@ -186,14 +194,27 @@ class _LoginScreenState extends State<LoginScreen> {
                           style: TextStyle(
                               color: Color(0xff2B2B2B),
                               fontWeight: FontWeight.w500,
-                              fontSize: 10),
+                              fontSize: 10,
+                              decoration: TextDecoration.underline,
+                              ),
+                              
                         ),
                         Text(
-                          " | Je n’ai pas de compte !",
+                          " | ",
                           style: TextStyle(
                               color: Color(0xff2B2B2B),
                               fontWeight: FontWeight.w500,
-                              fontSize: 10),
+                              fontSize: 10,
+                              ),
+                        ),
+                        Text(
+                          "Je n’ai pas de compte !",
+                          style: TextStyle(
+                              color: Color(0xff2B2B2B),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 10,
+                              decoration: TextDecoration.underline,
+                              ),
                         ),
                       ],
                     )

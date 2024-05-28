@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:testcanafran/screen/login.dart';
 
 class ChooseSignScreen extends StatelessWidget {
   // This widget is the root of your application.
@@ -69,7 +69,13 @@ class ChooseSignScreen extends StatelessWidget {
                           ),
                           alignment: Alignment.center,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => LoginScreen()),
+                          );
+                        },
                         child: Text(
                           "SE CONNECTER",
                           style: TextStyle(
@@ -111,12 +117,12 @@ class ChooseSignScreen extends StatelessWidget {
                     height: 15,
                   ),
                   Text(
-                          "copyright © since 2024 - MeetLife - All right reserved",
-                          style: TextStyle(
-                              color: Color(0xff2B2B2B),
-                              fontWeight: FontWeight.w500,
-                              fontSize: 10),
-                        )
+                    "copyright © since 2024 - MeetLife - All right reserved",
+                    style: TextStyle(
+                        color: Color(0xff2B2B2B),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 10),
+                  )
                 ]),
               ),
             ),
